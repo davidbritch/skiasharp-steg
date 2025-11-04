@@ -7,8 +7,8 @@ public class BitmapRendererService : ObservableObject, IBitmapRendererService
 {
     #region Properties
 
-    SKBitmap _bitmap = null;
-    public SKBitmap Bitmap
+    SKBitmap? _bitmap = null;
+    public SKBitmap? Bitmap
     {
         get => _bitmap;
         set
@@ -36,5 +36,5 @@ public class BitmapRendererService : ObservableObject, IBitmapRendererService
         InvalidateSurfaceRequest?.Invoke(this, EventArgs.Empty);
     }
 
-    public event EventHandler InvalidateSurfaceRequest;    
+    public event EventHandler? InvalidateSurfaceRequest;    
 }

@@ -33,7 +33,7 @@ public class MySKCanvasView : SKCanvasView
         }
     }
 
-    void CanvasRendererInvalidateSurfaceRequest(object sender, EventArgs e)
+    void CanvasRendererInvalidateSurfaceRequest(object? sender, EventArgs e)
     {
         InvalidateSurface();
     }

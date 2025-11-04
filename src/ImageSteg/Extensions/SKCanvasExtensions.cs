@@ -7,7 +7,7 @@ public static class SKCanvasExtensions
         ImageStretch stretch,
         ImageAlignment horizontal = ImageAlignment.Center,
         ImageAlignment vertical = ImageAlignment.Center,
-        SKPaint paint = null)
+        SKPaint? paint = null)
     {
         if (stretch == ImageStretch.Fill)
         {
@@ -39,7 +39,7 @@ public static class SKCanvasExtensions
         ImageStretch stretch,
         ImageAlignment horizontal = ImageAlignment.Center,
         ImageAlignment vertical = ImageAlignment.Center,
-        SKPaint paint = null)
+        SKPaint? paint = null)
     {
         if (stretch == ImageStretch.Fill)
         {
@@ -71,7 +71,7 @@ public static class SKCanvasExtensions
                                       ImageStretch stretch,
                                       ImageAlignment horizontal = ImageAlignment.Center,
                                       ImageAlignment vertical = ImageAlignment.Center,
-                                      SKPaint paint = null)
+                                      SKPaint? paint = null)
     {
         if (stretch == ImageStretch.Fill)
         {
@@ -100,8 +100,7 @@ public static class SKCanvasExtensions
         }
     }
 
-    static SKRect CalculateDisplayRect(SKRect dest, float imageWidth, float imageHeight,
-        ImageAlignment horizontal, ImageAlignment vertical)
+    static SKRect CalculateDisplayRect(SKRect dest, float imageWidth, float imageHeight, ImageAlignment horizontal, ImageAlignment vertical)
     {
         float x = 0;
         float y = 0;

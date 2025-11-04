@@ -14,8 +14,7 @@ public partial class MainPageViewModel : ObservableObject
     readonly IFileSaver _fileSaver;
     readonly IF5Service _f5Service;
 
-    string _fileName;
-
+    string? _fileName;
 
     #region Properties
 
@@ -25,7 +24,7 @@ public partial class MainPageViewModel : ObservableObject
     }
 
     [ObservableProperty]
-    public string saveStatusMessage;
+    public string? saveStatusMessage;
 
     [ObservableProperty]
     public string message = "Et In Arcadia Ego...";
@@ -53,7 +52,7 @@ public partial class MainPageViewModel : ObservableObject
         try
         {
             var image = await MediaPicker.PickPhotoAsync();
-            await CopyImageAsync(image);
+            await CopyImageAsync(image!);
         }
         catch (Exception ex)
         {
@@ -88,7 +87,7 @@ public partial class MainPageViewModel : ObservableObject
         // Encode
         try
         {
-            _f5Service.Embed(_bitmapService.Bitmap, Password, Message, binaryWriter);
+            _f5Service.Embed(_bitmapService.Bitmap!, Password, Message, binaryWriter);
             Console.WriteLine("Message successfully embedded.");
         }
         catch (CapacityException ce)
@@ -103,7 +102,7 @@ public partial class MainPageViewModel : ObservableObject
         // Save
         try
         {
-            var fileLocationResult = await _fileSaver.SaveAsync(_fileName, memStream);
+            var fileLocationResult = await _fileSaver.SaveAsync(_fileName!, memStream);
             fileLocationResult.EnsureSuccess();
             _fileName = fileLocationResult.FilePath;
             SaveStatusMessage = $"File saved: {fileLocationResult.FilePath}";
@@ -119,7 +118,7 @@ public partial class MainPageViewModel : ObservableObject
     {
         Message = string.Empty;
 
-        using FileStream fileStream = new FileStream(_fileName, FileMode.Open, FileAccess.Read);
+        using FileStream fileStream = new FileStream(_fileName!, FileMode.Open, FileAccess.Read);
         using BinaryReader binaryReader = new BinaryReader(fileStream);
 
         try
