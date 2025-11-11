@@ -13,4 +13,4 @@ The app uses the MVVM pattern, with MVVM support coming from CommunityToolkit.Mv
 
 For more information, see the following blog posts:
 
-- [Implementing JPEG Compression in C#](https://davestechlab.co.uk/software/implementing-jpeg-encoding/)
+- [Implementing JPEG encoding in C#](https://davestechlab.co.uk/software/implementing-jpeg-encoding/)
