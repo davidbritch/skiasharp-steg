@@ -11,6 +11,8 @@ The app performs the following operations:
  
 The app uses the MVVM pattern, with MVVM support coming from CommunityToolkit.Mvvm.
 
+**Ensure that you run a release build of the app. A debug build will be horrendously slow at runtime.**
+
 For more information, see the following blog posts:
 
 - [Implementing JPEG encoding in C#](https://davestechlab.co.uk/software/implementing-jpeg-encoding/)
