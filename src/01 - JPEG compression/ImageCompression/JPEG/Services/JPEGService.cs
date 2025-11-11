@@ -6,17 +6,17 @@ namespace ImageCompression.JPEG.Services;
 
 public class JPEGService: IJPEGService
 {
-    readonly IColorTransformationService _colorTransformationService;
+    readonly IColourTransformationService _colourTransformationService;
     readonly IDCTService _dctService;
     readonly IEncodingService _encodingService;
     readonly IHeaderService _headerService;
 
-    public JPEGService(IColorTransformationService colorTransformationService,
+    public JPEGService(IColourTransformationService colourTransformationService,
         IDCTService dCTService,
         IEncodingService encodingService,
         IHeaderService headerService)
     {
-        _colorTransformationService = colorTransformationService;
+        _colourTransformationService = colourTransformationService;
         _dctService = dCTService;
         _encodingService = encodingService;
         _headerService = headerService;
@@ -35,8 +35,8 @@ public class JPEGService: IJPEGService
         // Create JFIF headers
         _headerService.WriteHeaders(bw, jpeg);
 
-        // Transform image to YCBCR color space
-        jpeg.ColourData = _colorTransformationService.RGBToYCbCr(jpeg.Bitmap!);
+        // Transform image to YCBCR colour space
+        jpeg.ColourData = _colourTransformationService.RGBToYCbCr(jpeg.Bitmap!);
 
         // Calculate DCT values
         jpeg.DCTData = _dctService.CalculateDCT(jpeg.ColourData, jpeg.Width, jpeg.Height);

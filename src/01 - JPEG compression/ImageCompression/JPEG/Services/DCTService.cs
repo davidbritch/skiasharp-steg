@@ -60,14 +60,14 @@ public class DCTService : IDCTService
 
     DCTData ApplyDCT(DCTData dctData, int width, int height)
     {
-        dctData.Y = ApplyDCTToColorComponent(dctData.Y, width, height);
-        dctData.Cr = ApplyDCTToColorComponent(dctData.Cr, width, height);
-        dctData.Cb = ApplyDCTToColorComponent(dctData.Cb, width, height);
+        dctData.Y = ApplyDCTToColourComponent(dctData.Y, width, height);
+        dctData.Cr = ApplyDCTToColourComponent(dctData.Cr, width, height);
+        dctData.Cb = ApplyDCTToColourComponent(dctData.Cb, width, height);
 
         return dctData;
     }
 
-    Block8x8[] ApplyDCTToColorComponent(Block8x8[] input, int width, int height)
+    Block8x8[] ApplyDCTToColourComponent(Block8x8[] input, int width, int height)
     {
         Block8x8[] result = new Block8x8[width * height / 64];
 
@@ -89,14 +89,14 @@ public class DCTService : IDCTService
     {
         var result = new DCTData();
 
-        result.Y = CreateMCUsForColorComponent(padddedInput.Y, width, height);
-        result.Cr = CreateMCUsForColorComponent(padddedInput.Cr, width, height);
-        result.Cb = CreateMCUsForColorComponent(padddedInput.Cb, width, height);
+        result.Y = CreateMCUsForColourComponent(padddedInput.Y, width, height);
+        result.Cr = CreateMCUsForColourComponent(padddedInput.Cr, width, height);
+        result.Cb = CreateMCUsForColourComponent(padddedInput.Cb, width, height);
 
         return result;
     }
 
-    Block8x8[] CreateMCUsForColorComponent(float[,] input, int width, int height)
+    Block8x8[] CreateMCUsForColourComponent(float[,] input, int width, int height)
     {
         Block8x8[] res = new Block8x8[width * height / 64];
 

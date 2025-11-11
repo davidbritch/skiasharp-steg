@@ -66,7 +66,7 @@ internal static class FastFloatingPointDCT
         IDCT8x4_LeftPart(ref temp, ref dest);
         IDCT8x4_RightPart(ref temp, ref dest);
 
-        // TODO: What if we leave the blocks in a scaled-by-x8 state until final color packing?
+        // TODO: What if we leave the blocks in a scaled-by-x8 state until final colour packing?
         dest.MultiplyInPlace(C_0_125);
     }
 

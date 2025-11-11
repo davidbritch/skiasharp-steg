@@ -3,7 +3,7 @@ using SkiaSharp;
 
 namespace ImageCompression.JPEG.Services;
 
-public interface IColorTransformationService
+public interface IColourTransformationService
 {
     public ColourData RGBToYCbCr(SKBitmap bitmap);
 }

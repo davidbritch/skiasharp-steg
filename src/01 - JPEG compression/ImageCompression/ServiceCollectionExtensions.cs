@@ -8,7 +8,7 @@ public static class ServiceCollectionExtensions
     public static IServiceCollection AddImageServices(this IServiceCollection services)
     {
         services.AddScoped<IJPEGService, JPEGService>();
-        services.AddScoped<IColorTransformationService, ColorTransformationService>();
+        services.AddScoped<IColourTransformationService, ColourTransformationService>();
         services.AddScoped<IDCTService, DCTService>();
         services.AddScoped<IPaddingService, PaddingService>();
         services.AddScoped<IRunLengthEncodingService, RunLengthEncodingService>();

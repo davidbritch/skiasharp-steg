@@ -4,7 +4,7 @@ using SkiaSharp;
 
 namespace ImageCompression.JPEG.Services;
 
-public class ColorTransformationService : IColorTransformationService
+public class ColourTransformationService : IColourTransformationService
 {
     public ColourData RGBToYCbCr(SKBitmap bitmap)
     {
@@ -12,12 +12,12 @@ public class ColorTransformationService : IColorTransformationService
             throw new ArgumentNullException(nameof(bitmap), nameof(bitmap).ToArgumentNullExceptionMessage());
 
         var result = new ColourData(bitmap.Width, bitmap.Height);
-        ApplyColorTransform(bitmap, result);
+        ApplyColourTransform(bitmap, result);
 
         return result;
     }
 
-    unsafe void ApplyColorTransform(SKBitmap bitmap, ColourData result)
+    unsafe void ApplyColourTransform(SKBitmap bitmap, ColourData result)
     {
         SKPixmap pixmap = bitmap.PeekPixels();
         byte* bmpPtr = (byte*)pixmap.GetPixels().ToPointer();
@@ -37,13 +37,13 @@ public class ColorTransformationService : IColorTransformationService
                 float cb = RGB.ToCb(red, green, blue);
                 float cr = RGB.ToCr(red, green, blue);
 
-                float yColorShifted = (float)(y - 128);
-                float cbColorShifted = (float)(cb - 128);
-                float crColorShifted = (float)(cr - 128);
+                float yColourShifted = (float)(y - 128);
+                float cbColourShifted = (float)(cb - 128);
+                float crColourShifted = (float)(cr - 128);
 
-                result.Y[i, j] = yColorShifted;
-                result.Cb[i, j] = cbColorShifted;
-                result.Cr[i, j] = crColorShifted;
+                result.Y[i, j] = yColourShifted;
+                result.Cb[i, j] = cbColourShifted;
+                result.Cr[i, j] = crColourShifted;
             }
         }
     }
