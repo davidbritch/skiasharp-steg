@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageCompression", "ImageCompression\ImageCompression.csproj", "{75D2579B-5A51-16D9-E2B9-C057023BDCF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageSteg", "ImageSteg\ImageSteg.csproj", "{E337861D-BEC5-C891-1564-76D14F204BFE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75D2579B-5A51-16D9-E2B9-C057023BDCF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75D2579B-5A51-16D9-E2B9-C057023BDCF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75D2579B-5A51-16D9-E2B9-C057023BDCF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75D2579B-5A51-16D9-E2B9-C057023BDCF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E337861D-BEC5-C891-1564-76D14F204BFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E337861D-BEC5-C891-1564-76D14F204BFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E337861D-BEC5-C891-1564-76D14F204BFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E337861D-BEC5-C891-1564-76D14F204BFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C7CE8375-7300-4462-9F4B-534A840A1732}
+	EndGlobalSection
+EndGlobal
