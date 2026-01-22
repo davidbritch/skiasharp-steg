@@ -16,3 +16,4 @@ The app uses the MVVM pattern, with MVVM support coming from CommunityToolkit.Mv
 For more information, see the following blog posts:
 
 - [Implementing JPEG encoding in C#](https://davestechlab.co.uk/software/implementing-jpeg-encoding/)
+- [Implementing F5 steganography in C#](https://davestechlab.co.uk/software/implementing-f5-steganography/)
